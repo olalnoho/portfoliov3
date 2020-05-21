@@ -1,0 +1,38 @@
+// $bg-color: #9DBCD4;
+// $dark-color: #6D5ACF;
+// $line-color: #FFFD01;
+
+$bg-color: #00022e;
+$line-color: #016795;
+$dark-color: #02066f;
+
+@import "./text";
+@import "./animations";
+@import "./sections";
+@import "./components";
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-family: Lato;
+   color: white;
+   font-size: 62.5%;
+}
+
+ul {
+   list-style: none;
+}
+
+section {
+   padding: 5rem 0;
+}
+
+@media (max-width: 600px) {
+   html {
+      font-size: 50%;
+   }
+}

@@ -1,0 +1,81 @@
+.nav {
+   border-bottom: 2px solid #d46a7e;
+   // border-top: 2px solid #d46a7e;
+   width: 100%;
+   background-color: $bg-color;
+   &__links {
+      margin-left: 10%;
+      width: 40%;
+   }
+   ul {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      li {
+         font-size: 2rem;
+         transition: all 0.3s ease;
+         font-family: inherit;
+         cursor: pointer;
+         text-align: center;
+         padding: 1rem;
+         height: 100%;
+         flex: 1;
+         &:hover {
+            background-color: lighten($bg-color, 5%);
+         }
+      }
+
+      li.active {
+         background-color: lighten($bg-color, 5%);
+      }
+   }
+}
+
+.btn {
+   cursor: pointer;
+   font-family: inherit;
+   border: 2px solid;
+   outline: 0;
+   padding: 15px;
+   transition: all 0.4s;
+   &--primary {
+      background-color: $line-color;
+      color: white;
+      font-size: 1.5rem;
+
+      &:hover {
+         background-color: darken($line-color, 7%);
+      }
+   }
+}
+
+.container {
+   margin: auto;
+   max-width: 1200px;
+   width: 100%;
+}
+
+.flexcenter {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.underline {
+   height: 5px;
+   width: 70px;
+   margin: 2.5rem 0 10rem 0;
+   background-color: #000;
+}
+
+.animateLeft {
+   animation: leftFade 1.4s ease forwards;
+}
+
+.animateRight {
+   animation: rightFade 1.4s ease forwards;
+}
+
+.animateUp {
+   animation: upFade 0.6s ease forwards;
+}
