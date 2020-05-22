@@ -85,6 +85,7 @@
          color: white;
          &__header {
             h3 {
+               letter-spacing: 4px;
                margin-bottom: 0;
             }
             border-top-right-radius: 10px;
@@ -112,6 +113,46 @@
                text-align: center;
                margin: 2rem 0;
             }
+         }
+      }
+   }
+}
+
+[class*="__header"] {
+   font-family: Patrick Hand;
+}
+
+.projects {
+   min-height: 100vh;
+   background-color: $line-color;
+   .container {
+      flex-direction: column;
+   }
+   &__header {
+      flex-direction: column;
+      .underline {
+         background-color: #fff;
+      }
+   }
+
+   &__filter {
+      width: 100%;
+      min-height: 10rem;
+      flex-wrap: wrap;
+
+      .filterbtn {
+         border-radius: 1rem;
+         cursor: pointer;
+         padding: 1rem;
+         background-color: darken($line-color, 10%);
+         text-align: center;
+         width: 20rem;
+         font-size: 2rem;
+         margin: 1rem;
+         transition: all 0.3s ease;
+
+         &:hover {
+            background-color: darken($line-color, 15%);
          }
       }
    }
