@@ -3,11 +3,7 @@
 // $line-color: #FFFD01;
 
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
-
-$bg-color: #00022e;
-$line-color: #016795;
-$dark-color: #02066f;
-
+@import "./vars";
 @import "./text";
 @import "./animations";
 @import "./sections";
