@@ -6,11 +6,13 @@
 
 .heading-2 {
   font-size: 4rem;
+  font-family: Patrick Hand;
   margin-bottom: 1rem;
+  letter-spacing: 2px;
 }
 
 .heading-3 {
-  font-size: 3rem;
+  font-size: 2.6rem;
   margin-bottom: 1rem;
 }
 
@@ -24,10 +26,6 @@
 
 .center {
   text-align: center;
-}
-
-[class*="__header"] {
-  font-family: Patrick Hand;
 }
 
 @-webkit-keyframes leftFade {
@@ -351,7 +349,6 @@
 }
 
 .about .skills .skill__header h3 {
-  letter-spacing: 4px;
   margin-bottom: 0;
 }
 
@@ -454,6 +451,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 1rem;
 }
 
 .nav ul li {
@@ -463,21 +461,17 @@
   font-family: inherit;
   cursor: pointer;
   text-align: center;
-  padding: 1rem;
   height: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  margin: 0 2rem;
+  text-transform: uppercase;
 }
 
 .nav ul li:hover {
   color: orangered;
-  background-color: #00034d;
 }
 
 .nav ul li.active {
   color: orangered;
-  background-color: #00034d;
 }
 
 .btn {
@@ -544,6 +538,11 @@
   .nav__links {
     width: 100%;
     margin: 0;
+  }
+  .nav__links ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

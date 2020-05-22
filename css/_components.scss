@@ -9,24 +9,24 @@
       height: 100%;
       width: 100%;
       display: flex;
+      padding: 1rem;
       li {
          font-size: 1.7rem;
          transition: all 0.3s ease;
          font-family: inherit;
          cursor: pointer;
          text-align: center;
-         padding: 1rem;
          height: 100%;
-         flex: 1;
+         margin: 0 2rem;
+         text-transform: uppercase;
+         // flex: 1;
          &:hover {
             color: orangered;
-            background-color: lighten($bg-color, 6%);
          }
       }
 
       li.active {
          color: orangered;
-         background-color: lighten($bg-color, 6%);
       }
    }
 }
@@ -84,6 +84,9 @@
    .nav__links {
       width: 100%;
       margin: 0;
+      ul {
+         justify-content: center;
+      }
    }
 }
 
