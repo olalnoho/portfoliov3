@@ -159,7 +159,7 @@
    &__grid {
       opacity: 0;
       padding: 0 1rem;
-      gap: 5px;
+      gap: 3px;
       width: 100%;
       display: grid;
       justify-items: center;
@@ -177,6 +177,7 @@
          &__image {
             width: 100%;
             height: 100%;
+            transition: filter 0.3s ease-in-out;
          }
 
          &:nth-child(1) .project__image {
@@ -213,7 +214,7 @@
          }
 
          &:hover .project__image {
-            filter: brightness(45%);
+            filter: brightness(30%);
          }
 
          &:hover .project__text {

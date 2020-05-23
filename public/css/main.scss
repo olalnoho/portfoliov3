@@ -2,19 +2,18 @@
 // $dark-color: #6D5ACF;
 // $line-color: #FFFD01;
 
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
-@import "./vars";
-@import "./text";
-@import "./animations";
-@import "./sections";
-@import "./components";
-
 * {
    padding: 0;
    margin: 0;
    box-sizing: border-box;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+@import "./vars";
+@import "./text";
+@import "./animations";
+@import "./sections";
+@import "./components";
 html {
    font-family: Lato;
    color: white;
