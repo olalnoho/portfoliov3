@@ -28,7 +28,7 @@
    &__content {
       .btn {
          opacity: 0;
-         animation: fadeIn 1.5s 1s ease forwards;
+         animation: fadeIn 1.5s 0.75s ease forwards;
          margin: auto;
          width: 20rem;
          display: flex;
@@ -124,6 +124,7 @@
       flex-direction: column;
    }
    &__header {
+      opacity: 0;
       flex-direction: column;
       .underline {
          background-color: #fff;
@@ -137,6 +138,8 @@
       margin-bottom: 2rem;
 
       .filterbtn {
+         border: 1px solid #fff;
+         opacity: 0;
          border-radius: 1rem;
          cursor: pointer;
          padding: 1rem;
@@ -154,13 +157,14 @@
    }
 
    &__grid {
+      opacity: 0;
       padding: 0 1rem;
       gap: 5px;
       width: 100%;
       display: grid;
       justify-items: center;
       justify-content: center;
-      grid-template-columns: repeat(auto-fill, 39rem);
+      grid-template-columns: repeat(auto-fit, 39rem);
 
       .project {
          display: flex;
@@ -170,8 +174,25 @@
          background-color: darken($line-color, 15%);
          width: 100%;
          height: 30rem;
-         &:nth-child(1) {
+         &__image {
+            width: 100%;
+            height: 100%;
+         }
+
+         &:nth-child(1) .project__image {
             background: center / cover url(../assets/social-media-showcase-min.png);
+         }
+         &:nth-child(2) .project__image {
+            background: center / cover url(../assets/gram-showcase.png);
+         }
+         &:nth-child(3) .project__image {
+            background: center / cover url(../assets/forum-showcase.png);
+         }
+         &:nth-child(4) .project__image {
+            background: center / cover url(../assets/blog-showcase.png);
+         }
+         &:nth-child(5) .project__image {
+            background: center / cover url(../assets/cmdline-showcase.png);
          }
 
          &__text {
@@ -191,6 +212,10 @@
             }
          }
 
+         &:hover .project__image {
+            filter: brightness(45%);
+         }
+
          &:hover .project__text {
             opacity: 1;
             top: 10%;
@@ -206,7 +231,7 @@
             width: 50%;
             position: absolute;
             left: 10%;
-            bottom: 10rem;
+            bottom: 8rem;
             transition: all 0.5s;
             opacity: 0;
          }
