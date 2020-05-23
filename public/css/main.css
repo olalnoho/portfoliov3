@@ -431,9 +431,65 @@
 }
 
 .projects__grid .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #003249;
   width: 100%;
-  min-height: 30rem;
+  height: 30rem;
+}
+
+.projects__grid .project:nth-child(1) {
+  background: center/cover url(../assets/social-media-showcase-min.png);
+}
+
+.projects__grid .project__text {
+  position: absolute;
+  top: 0%;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  text-align: center;
+}
+
+.projects__grid .project__text .hl {
+  font-size: 2rem;
+  display: block;
+  margin: 2rem;
+  font-weight: bold;
+}
+
+.projects__grid .project__text p {
+  font-size: 1.6rem;
+}
+
+.projects__grid .project:hover .project__text {
+  opacity: 1;
+  top: 10%;
+}
+
+.projects__grid .project:hover .project__btn {
+  opacity: 1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.projects__grid .project__btn {
+  width: 50%;
+  position: absolute;
+  left: 10%;
+  bottom: 10rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
 }
 
 @media (max-width: 1100px) {

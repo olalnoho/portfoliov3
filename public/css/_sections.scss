@@ -163,9 +163,53 @@
       grid-template-columns: repeat(auto-fill, 39rem);
 
       .project {
+         display: flex;
+         position: relative;
+         align-items: center;
+         justify-content: center;
          background-color: darken($line-color, 15%);
          width: 100%;
-         min-height: 30rem;
+         height: 30rem;
+         &:nth-child(1) {
+            background: center / cover url(../assets/social-media-showcase-min.png);
+         }
+
+         &__text {
+            position: absolute;
+            top: 0%;
+            opacity: 0;
+            transition: all 0.5s;
+            text-align: center;
+            .hl {
+               font-size: 2rem;
+               display: block;
+               margin: 2rem;
+               font-weight: bold;
+            }
+            p {
+               font-size: 1.6rem;
+            }
+         }
+
+         &:hover .project__text {
+            opacity: 1;
+            top: 10%;
+         }
+
+         &:hover .project__btn {
+            opacity: 1;
+            left: 50%;
+            transform: translateX(-50%);
+         }
+
+         &__btn {
+            width: 50%;
+            position: absolute;
+            left: 10%;
+            bottom: 10rem;
+            transition: all 0.5s;
+            opacity: 0;
+         }
       }
    }
 }
