@@ -134,6 +134,7 @@
       width: 100%;
       min-height: 10rem;
       flex-wrap: wrap;
+      margin-bottom: 2rem;
 
       .filterbtn {
          border-radius: 1rem;
@@ -149,6 +150,22 @@
          &:hover {
             background-color: darken($line-color, 15%);
          }
+      }
+   }
+
+   &__grid {
+      padding: 0 1rem;
+      gap: 5px;
+      width: 100%;
+      display: grid;
+      justify-items: center;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fill, 39rem);
+
+      .project {
+         background-color: darken($line-color, 15%);
+         width: 100%;
+         min-height: 30rem;
       }
    }
 }

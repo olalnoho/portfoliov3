@@ -396,6 +396,7 @@
   min-height: 10rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 .projects__filter .filterbtn {
@@ -413,6 +414,26 @@
 
 .projects__filter .filterbtn:hover {
   background-color: #003249;
+}
+
+.projects__grid {
+  padding: 0 1rem;
+  gap: 5px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (39rem)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 39rem);
+}
+
+.projects__grid .project {
+  background-color: #003249;
+  width: 100%;
+  min-height: 30rem;
 }
 
 @media (max-width: 1100px) {
