@@ -491,11 +491,11 @@
 }
 
 .projects__grid .project:nth-child(2) .project__image {
-  background: center/cover url(../assets/gram-showcase.png);
+  background: center/cover url(../assets/forum-showcase.png);
 }
 
 .projects__grid .project:nth-child(3) .project__image {
-  background: center/cover url(../assets/forum-showcase.png);
+  background: center/cover url(../assets/gram-showcase.png);
 }
 
 .projects__grid .project:nth-child(4) .project__image {
@@ -748,6 +748,17 @@
   margin-left: 1rem;
 }
 
+.modal-container .modal__close {
+  cursor: pointer;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: black;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
 .modal-container.visible {
   pointer-events: initial;
 }
@@ -789,6 +800,10 @@ html {
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 section {

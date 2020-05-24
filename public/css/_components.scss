@@ -129,6 +129,17 @@
             }
          }
       }
+
+      &__close {
+         cursor: pointer;
+         position: absolute;
+         bottom: 1rem;
+         right: 1rem;
+         font-size: 2rem;
+         color: black;
+         transition: all 0.2s;
+      }
+
    }
 }
 

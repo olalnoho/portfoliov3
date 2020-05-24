@@ -20,22 +20,24 @@
          </div>
          <div class="info">
             <div class="info__title">
-               YourSpace
+
             </div>
             <div class="info__desc">
-               A social media site with profiles, a message board and private messaging
+
             </div>
             <div class="info__actions">
-               <a class="btn btn--primary">
+               <a href="#!" class="btn btn--primary" target="_blank">
                   Live Demo
                   <i class="fas fa-external-link-alt"></i>
                </a>
-               <a class="btn btn--primary">
+               <a href="#!" class="btn btn--primary" target="_blank">
                   Source Code
                   <i class="fas fa-code-branch"></i>
                </a>
             </div>
          </div>
+
+         <i class="fas fa-times-circle modal__close"></i>
       </div>
    </div>
    <header class="landing">
@@ -145,19 +147,7 @@
                      React, GraphQL, Apollo, Socket.IO and Postgres
                   </p>
                </div>
-               <button class="project__btn btn btn--primary"> Learn more </button>
-            </div>
-            <div onclick="" class="project mix react">
-               <div class="project__image"></div>
-               <div class="project__text">
-                  <span class="hl">
-                     Instagram Like
-                  </span>
-                  <p>
-                     React, Express and Postgres
-                  </p>
-               </div>
-               <button class="project__btn btn btn--primary"> Learn more </button>
+               <button class="project__btn btn btn--primary" data-proj="sms"> Learn more </button>
             </div>
             <div onclick="" class="project mix react graphql">
                <div class="project__image"></div>
@@ -169,7 +159,19 @@
                      React, GraphQL, Apollo and MongoDB
                   </p>
                </div>
-               <button class="project__btn btn btn--primary"> Learn more </button>
+               <button class="project__btn btn btn--primary" data-proj="forum"> Learn more </button>
+            </div>
+            <div onclick="" class="project mix react">
+               <div class="project__image"></div>
+               <div class="project__text">
+                  <span class="hl">
+                     Instagram Like
+                  </span>
+                  <p>
+                     React, Express and Postgres
+                  </p>
+               </div>
+               <button class="project__btn btn btn--primary" data-proj="gram"> Learn more </button>
             </div>
             <div onclick="" class="project mix graphql react">
                <div class="project__image"></div>
@@ -181,7 +183,7 @@
                      React, GraphQL, Apollo and Postgres
                   </p>
                </div>
-               <button class="project__btn btn btn--primary"> Learn more </button>
+               <button class="project__btn btn btn--primary" data-proj="blog"> Learn more </button>
             </div>
             <div onclick="" class="project mix commandline">
                <div class="project__image"></div>
@@ -193,7 +195,7 @@
                      Node
                   </p>
                </div>
-               <button class="project__btn btn btn--primary"> Learn more </button>
+               <button class="project__btn btn btn--primary" data-proj="cmdNote"> Learn more </button>
             </div>
          </div>
       </div>
@@ -201,6 +203,7 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
    <script src="js/script.js"></script>
    <script src="js/animations.js"></script>
+   <script src="js/modalData.js"></script>
    <script src="js/modal.js"></script>
 </body>
 

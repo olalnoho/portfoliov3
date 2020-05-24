@@ -26,9 +26,7 @@ const observer = new IntersectionObserver((entries, self) => {
       }
    })
 }, {
-   // @note
-   // So the entire element has to be in view for trigger.
-   threshold: 0.5,
+   threshold: 0.2,
 });
 
 [...headings, ...skills, ...filterbtns, ...gallery].forEach(el => {
