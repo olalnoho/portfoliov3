@@ -81,6 +81,7 @@
 }
 
 .modal-container {
+   max-height: 100vh;
    pointer-events: none;
    position: fixed;
    display: flex;
@@ -100,6 +101,7 @@
       background-color: rgba(0, 0, 0, 0.5);
    }
    .modal {
+      max-height: 100vh;
       transition: all 0.3s;
       transform: scale(0.8);
       opacity: 0;

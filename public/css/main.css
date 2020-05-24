@@ -678,6 +678,7 @@
 }
 
 .modal-container {
+  max-height: 100vh;
   pointer-events: none;
   position: fixed;
   display: -webkit-box;
@@ -707,6 +708,7 @@
 }
 
 .modal-container .modal {
+  max-height: 100vh;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-transform: scale(0.8);
