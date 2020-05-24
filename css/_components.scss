@@ -76,7 +76,12 @@
    background-color: #000;
 }
 
+.transition {
+   transition: all 0.5s ease;
+}
+
 .modal-container {
+   max-height: 100vh;
    pointer-events: none;
    position: fixed;
    display: flex;
@@ -96,6 +101,7 @@
       background-color: rgba(0, 0, 0, 0.5);
    }
    .modal {
+      max-height: 100vh;
       transition: all 0.3s;
       transform: scale(0.8);
       opacity: 0;
@@ -105,8 +111,36 @@
       top: -5rem;
       max-width: 700px;
       .carousel {
+         overflow: hidden;
+         position: relative;
          width: 700px;
          height: 450px;
+
+         #next {
+            bottom: 1rem;
+            right: 1rem;
+         }
+
+         #prev {
+            bottom: 1rem;
+            left: 1rem;
+         }
+
+         i {
+            cursor: pointer;
+            position: absolute;
+            font-size: 3rem;
+            color: black;
+         }
+         .track {
+            height: 100%;
+            display: flex;
+            img {
+               height: 100%;
+               object-fit: cover;
+               width: 70rem;
+            }
+         }
       }
 
       .info {
@@ -204,6 +238,10 @@
          .carousel {
             height: 250px;
             width: 100%;
+
+            .track img {
+               width: 100%;
+            }
          }
 
          &__close {

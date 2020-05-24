@@ -672,7 +672,13 @@
   background-color: #000;
 }
 
+.transition {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
 .modal-container {
+  max-height: 100vh;
   pointer-events: none;
   position: fixed;
   display: -webkit-box;
@@ -702,6 +708,7 @@
 }
 
 .modal-container .modal {
+  max-height: 100vh;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-transform: scale(0.8);
@@ -718,8 +725,41 @@
 }
 
 .modal-container .modal .carousel {
+  overflow: hidden;
+  position: relative;
   width: 700px;
   height: 450px;
+}
+
+.modal-container .modal .carousel #next {
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.modal-container .modal .carousel #prev {
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.modal-container .modal .carousel i {
+  cursor: pointer;
+  position: absolute;
+  font-size: 3rem;
+  color: black;
+}
+
+.modal-container .modal .carousel .track {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-container .modal .carousel .track img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 70rem;
 }
 
 .modal-container .modal .info {
@@ -837,6 +877,9 @@
   }
   .modal-container .modal .carousel {
     height: 250px;
+    width: 100%;
+  }
+  .modal-container .modal .carousel .track img {
     width: 100%;
   }
   .modal-container .modal__close {
