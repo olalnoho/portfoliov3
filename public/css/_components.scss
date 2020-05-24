@@ -1,6 +1,13 @@
 .nav {
+   padding: 1rem;
    width: 100%;
    background-color: $bg-color;
+   display: flex;
+   align-items: center;
+   i {
+      font-size: 3rem;
+      display: none;
+   }
    &__links {
       margin-left: 10%;
       width: 40%;
@@ -9,7 +16,6 @@
       height: 100%;
       width: 100%;
       display: flex;
-      padding: 1rem;
       li {
          font-size: 1.7rem;
          transition: all 0.3s ease;
@@ -29,6 +35,15 @@
          color: orangered;
       }
    }
+}
+
+.nav.sticky {
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 0;
+   z-index: 100;
+   background-color: rgba(0, 0, 0, 0.9);
 }
 
 .btn {
@@ -179,14 +194,6 @@
             flex: 0.8;
             padding: 1rem;
 
-            &__title {
-               padding: 1rem;
-            }
-
-            &__desc {
-               padding: 1rem;
-            }
-
             &__actions {
                display: flex;
                margin-top: auto;
@@ -200,7 +207,6 @@
    .modal-container {
       .modal {
          width: 100%;
-         // height: 100%;
          top: 0;
          .carousel {
             height: 250px;
@@ -226,8 +232,29 @@
 }
 
 @media (max-width: 500px) {
-   .nav__links {
-      width: 100%;
-      margin-left: 0;
+   .nav {
+      i {
+         margin-left: auto;
+         margin-right: 1rem;
+         display: block;
+         cursor: pointer;
+      }
+      flex-wrap: wrap;
+      .nav__links {
+         display: none;
+      }
+
+      .nav__links.show {
+         display: flex;
+         flex-basis: 100%;
+         width: 100%;
+         margin-left: 0;
+         ul {
+            flex-direction: column;
+            li {
+               margin: 1rem;
+            }
+         }
+      }
    }
 }
