@@ -20,7 +20,6 @@ const modalData = {
       source: 'https://github.com/olalnoho/Blog',
       assets: ['./assets/blog/0.png', './assets/blog/1.png', './assets/blog/2.png']
    },
-
    forum: {
       title: 'Internet Forum',
       detail: 'Forum, with partial BBCode support using a custom parser.',
@@ -28,7 +27,6 @@ const modalData = {
       source: 'https://github.com/olalnoho/Forum',
       assets: ['./assets/forum/0.png', './assets/forum/1.png']
    },
-
    gram: {
       title: 'Instagram like',
       detail: 'Upload and comment on assets.',
