@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/main.css">
+   <title>Portfolio</title>
+</head>
+
+<body>
+   <div class="modal-container">
+      <div class="backdrop"></div>
+      <div class="modal flexcenter">
+         <div class="carousel">
+            <div class="track"></div>
+         </div>
+         <div class="info">
+            <div class="info__title">
+
+            </div>
+            <div class="info__desc">
+
+            </div>
+            <div class="info__actions">
+               <a href="#!" class="btn btn--primary" target="_blank">
+                  Live Demo
+                  <i class="fas fa-external-link-alt"></i>
+               </a>
+               <a href="#!" class="btn btn--primary" target="_blank">
+                  Source Code
+                  <i class="fas fa-code-branch"></i>
+               </a>
+               <i class="fas fa-times-circle modal__close"></i>
+            </div>
+         </div>
+
+      </div>
+   </div>
+   <header id="landing" class="landing">
+      <div class="landing__container">
+         <div class="landing__image">
+            <img class="hidesmall" src="assets/undraw_through_the_park_lxnl.svg" />
+         </div>
+         <div class="landing__content">
+            <div class="landing__content__text">
+               <h2 class="heading-1">Hello, I am <span class="hl">Alexander</span>.</h2>
+               <p class="lead center">A self-taught (web) developer</p>
+            </div>
+            <button data-nav="projects" class="btn btn--primary navbtn">View my projects<i class="fas fa-angle-double-right"></i></button>
+         </div>
+      </div>
+   </header>
+   <nav class="nav">
+      <i class="fas fa-ellipsis-h"></i>
+      <div class="nav__links">
+         <ul>
+            <li data-nav="landing" class="navbtn">Home</li>
+            <li data-nav="about" class="navbtn">About</li>
+            <li data-nav="projects" class="navbtn">Projects</li>
+            <li class="navbtn">Contact</li>
+         </ul>
+      </div>
+   </nav>
+   <section id="about" class="about">
+      <div class="container flexcenter">
+         <div class="about__header flexcenter" data-animation="animateLeft">
+            <h3 class="heading-2">Some things I know</h3>
+            <div class="underline"></div>
+         </div>
+         <ul class="skills">
+            <div class="skill" data-n="1" data-animation="animateRight">
+               <div class="skill__header">
+                  <i class="fas fa-desktop"></i>
+                  <h3 class="heading-3">Front end</h3>
+               </div>
+               <ul class="skill__list">
+                  <li>HTML5</li>
+                  <li>Javascript</li>
+                  <li>CSS | SASS | Grid | Flexbox</li>
+                  <li>React | Redux</li>
+               </ul>
+            </div>
+            <div class="skill" data-n="2" data-animation="animateLeft">
+               <div class="skill__header">
+                  <i class="fas fa-server"></i>
+                  <h3 class="heading-3">Server</h3>
+               </div>
+               <ul class="skill__list">
+                  <li>NodeJS</li>
+                  <li>Express</li>
+                  <li>GraphQL</li>
+                  <li>ASP.NET</li>
+               </ul>
+            </div>
+            <div class="skill" data-n="3" data-animation="animateRight">
+               <div class="skill__header">
+                  <i class="fas fa-database"></i>
+                  <h3 class="heading-3">Database</h3>
+               </div>
+               <ul class="skill__list">
+                  <li>PostgresQL</li>
+                  <li>MongoDB</li>
+                  <li>Redis</li>
+                  <li>Knex | Mongoose</li>
+               </ul>
+            </div>
+            <div class="skill" data-n="4" data-animation="animateLeft">
+               <div class="skill__header">
+                  <i class="fas fa-code"></i>
+                  <h3 class="heading-3">Tooling & Other</h3>
+               </div>
+               <ul class="skill__list">
+                  <li>Git</li>
+                  <li>Docker</li>
+                  <li>Regex</li>
+                  <li>Python</li>
+               </ul>
+            </div>
+         </ul>
+      </div>
+   </section>
+   <section id="projects" class="projects">
+      <div class="container flexcenter">
+         <div class="projects__header flexcenter" data-animation="animateLeft">
+            <h3 class="heading-2">Some things I've made</h3>
+            <div class="underline"></div>
+         </div>
+         <div class="projects__filter flexcenter">
+            <div class="filterbtn" data-filter="all" data-delay="0.2" data-animation="fadeIn">All</div>
+            <div class="filterbtn" data-filter=".react" data-delay="0.4" data-animation="fadeIn">React</div>
+            <div class="filterbtn" data-filter=".graphql" data-delay="0.6" data-animation="fadeIn">GraphQL</div>
+            <div class="filterbtn" data-filter=".commandline" data-delay="0.8" data-animation="fadeIn">Command line
+            </div>
+         </div>
+         <div class="projects__grid">
+            <!-- The onclick is for hover in Safari -->
+            <div onclick="" class="project mix react graphql">
+               <div class="project__image"></div>
+               <div class="project__text">
+                  <span class="hl">
+                     Social Media Site
+                  </span>
+                  <p>
+                     React, GraphQL, Apollo, Socket.IO and Postgres
+                  </p>
+               </div>
+               <button class="project__btn btn btn--primary" data-proj="sms"> Learn more </button>
+            </div>
+            <div onclick="" class="project mix react graphql">
+               <div class="project__image"></div>
+               <div class="project__text">
+                  <span class="hl">
+                     Forum
+                  </span>
+                  <p>
+                     React, GraphQL, Apollo and MongoDB
+                  </p>
+               </div>
+               <button class="project__btn btn btn--primary" data-proj="forum"> Learn more </button>
+            </div>
+            <div onclick="" class="project mix react">
+               <div class="project__image"></div>
+               <div class="project__text">
+                  <span class="hl">
+                     Instagram Like
+                  </span>
+                  <p>
+                     React, Express and Postgres
+                  </p>
+               </div>
+               <button class="project__btn btn btn--primary" data-proj="gram"> Learn more </button>
+            </div>
+            <div onclick="" class="project mix graphql react">
+               <div class="project__image"></div>
+               <div class="project__text">
+                  <span class="hl">
+                     Blog App
+                  </span>
+                  <p>
+                     React, GraphQL, Apollo and Postgres
+                  </p>
+               </div>
+               <button class="project__btn btn btn--primary" data-proj="blog"> Learn more </button>
+            </div>
+            <div onclick="" class="project mix commandline">
+               <div class="project__image"></div>
+               <div class="project__text">
+                  <span class="hl">
+                     Command line app for keeping track of todos and notes in a project
+                  </span>
+                  <p>
+                     Node
+                  </p>
+               </div>
+               <button class="project__btn btn btn--primary" data-proj="cmdNote"> Learn more </button>
+            </div>
+         </div>
+      </div>
+   </section>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
+   <script src="js/script.js"></script>
+   <script src="js/scrolling.js"></script>
+   <script src="js/navBar.js"></script>
+   <script src="js/animations.js"></script>
+   <script src="js/modalData.js"></script>
+   <script src="js/modal.js"></script>
+</body>
+
+</html>

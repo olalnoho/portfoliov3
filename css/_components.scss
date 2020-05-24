@@ -1,0 +1,253 @@
+.nav {
+   position: sticky;
+   top: -1px;
+   z-index: 100;
+   padding: 1rem;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.89);
+   display: flex;
+   align-items: center;
+   i {
+      font-size: 3rem;
+      display: none;
+   }
+   &__links {
+      margin-left: 10%;
+      width: 40%;
+   }
+   ul {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      li {
+         font-size: 1.7rem;
+         transition: all 0.3s ease;
+         font-family: inherit;
+         cursor: pointer;
+         text-align: center;
+         height: 100%;
+         margin: 0 2rem;
+         text-transform: uppercase;
+         &:hover {
+            color: orangered;
+         }
+      }
+
+      li.active {
+         color: orangered;
+      }
+   }
+}
+
+.btn {
+   cursor: pointer;
+   font-family: inherit;
+   border: 2px solid;
+   outline: 0;
+   padding: 15px;
+   transition: all 0.4s;
+   &--primary {
+      background-color: $line-color;
+      color: white;
+      font-size: 1.5rem;
+
+      &:hover {
+         background-color: darken($line-color, 7%);
+      }
+   }
+}
+
+.container {
+   margin: auto;
+   max-width: 1200px;
+   width: 100%;
+}
+
+.flexcenter {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.underline {
+   height: 5px;
+   width: 70px;
+   margin: 2.5rem 0 10rem 0;
+   background-color: #000;
+}
+
+.modal-container {
+   pointer-events: none;
+   position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 2000;
+   .backdrop {
+      transition: all 0.3s;
+      opacity: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+   }
+   .modal {
+      transition: all 0.3s;
+      transform: scale(0.8);
+      opacity: 0;
+      position: relative;
+      background-color: #fff;
+      flex-direction: column;
+      top: -5rem;
+      max-width: 700px;
+      .carousel {
+         width: 700px;
+         height: 450px;
+      }
+
+      .info {
+         border-top: 1px solid #000;
+         display: flex;
+         flex-direction: column;
+         color: black;
+         padding: 2rem;
+         width: 100%;
+         &__title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+         }
+
+         &__desc {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+         }
+         &__actions {
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            .btn {
+               padding: 11px 30px;
+               i {
+                  margin-left: 1rem;
+               }
+            }
+         }
+      }
+
+      &__close {
+         cursor: pointer;
+         margin-left: auto;
+         position: absolute;
+         bottom: 1rem;
+         right: 1rem;
+         font-size: 2rem;
+         color: black;
+         transition: all 0.2s;
+      }
+   }
+}
+
+.modal-container.visible {
+   pointer-events: initial;
+}
+.modal-container.visible .modal {
+   opacity: 1;
+   transform: scale(1);
+}
+.modal-container.visible .backdrop {
+   opacity: 1;
+}
+
+@media (max-width: 1000px) {
+   .nav__links {
+      width: 100%;
+      margin: 0;
+      ul {
+         justify-content: center;
+      }
+   }
+}
+
+@media (max-width: 800px) {
+   .modal-container {
+      .modal {
+         width: 100%;
+         top: 0;
+         .carousel {
+            width: 100%;
+         }
+
+         .info {
+            display: flex;
+            flex-direction: column;
+            flex: 0.8;
+            padding: 1rem;
+
+            &__actions {
+               display: flex;
+               margin-top: auto;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 600px) {
+   .modal-container {
+      .modal {
+         width: 100%;
+         top: 0;
+         .carousel {
+            height: 250px;
+            width: 100%;
+         }
+
+         &__close {
+            top: 1rem;
+         }
+
+         .info {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            &__actions {
+               display: flex;
+               margin-top: auto;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 500px) {
+   .nav {
+      i {
+         margin-left: auto;
+         margin-right: 1rem;
+         display: block;
+         cursor: pointer;
+      }
+      flex-wrap: wrap;
+      .nav__links {
+         display: none;
+      }
+
+      .nav__links.show {
+         display: flex;
+         flex-basis: 100%;
+         width: 100%;
+         margin-left: 0;
+         ul {
+            flex-direction: column;
+            li {
+               margin: 1rem;
+            }
+         }
+      }
+   }
+}
