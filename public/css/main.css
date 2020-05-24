@@ -574,9 +574,13 @@
 }
 
 .nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  z-index: 100;
   padding: 1rem;
   width: 100%;
-  background-color: #00022e;
+  background-color: rgba(0, 0, 0, 0.89);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -621,15 +625,6 @@
 
 .nav ul li.active {
   color: orangered;
-}
-
-.nav.sticky {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .btn {

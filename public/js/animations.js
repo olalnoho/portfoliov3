@@ -1,4 +1,4 @@
-const headings = document.querySelectorAll('.about__header, .projects__header')
+const headings = document.querySelectorAll('.projects__header, .about__header')
 const gallery = document.querySelectorAll('.projects__grid')
 const filterbtns = document.querySelectorAll('.filterbtn')
 const skills = document.querySelectorAll('.skill');
