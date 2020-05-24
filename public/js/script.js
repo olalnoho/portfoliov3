@@ -5,4 +5,3 @@ openNav.addEventListener('click', e => {
 })
 
 mixitup(document.querySelector('.projects__grid'));
-stickybits('.nav');

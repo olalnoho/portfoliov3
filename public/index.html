@@ -40,7 +40,7 @@
 
       </div>
    </div>
-   <header class="landing">
+   <header id="landing" class="landing">
       <div class="landing__container">
          <div class="landing__image">
             <img class="hidesmall" src="assets/undraw_through_the_park_lxnl.svg" />
@@ -50,7 +50,7 @@
                <h2 class="heading-1">Hello, I am <span class="hl">Alexander</span>.</h2>
                <p class="lead center">A self-taught (web) developer</p>
             </div>
-            <button class="btn btn--primary">View my projects<i class="fas fa-angle-double-right"></i></button>
+            <button data-nav="projects" class="btn btn--primary navbtn">View my projects<i class="fas fa-angle-double-right"></i></button>
          </div>
       </div>
    </header>
@@ -58,14 +58,14 @@
       <i class="fas fa-ellipsis-h"></i>
       <div class="nav__links">
          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <li data-nav="landing" class="navbtn">Home</li>
+            <li data-nav="about" class="navbtn">About</li>
+            <li data-nav="projects" class="navbtn">Projects</li>
+            <li class="navbtn">Contact</li>
          </ul>
       </div>
    </nav>
-   <section class="about">
+   <section id="about" class="about">
       <div class="container flexcenter">
          <div class="about__header flexcenter" data-animation="animateLeft">
             <h3 class="heading-2">Some things I know</h3>
@@ -123,7 +123,7 @@
          </ul>
       </div>
    </section>
-   <section class="projects">
+   <section id="projects" class="projects">
       <div class="container flexcenter">
          <div class="projects__header flexcenter" data-animation="animateLeft">
             <h3 class="heading-2">Some things I've made</h3>
@@ -202,7 +202,9 @@
       </div>
    </section>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
    <script src="js/script.js"></script>
+   <script src="js/scrolling.js"></script>
    <script src="js/navBar.js"></script>
    <script src="js/animations.js"></script>
    <script src="js/modalData.js"></script>
