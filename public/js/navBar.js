@@ -3,8 +3,6 @@ const homeBreakpoint = document.querySelector('.landing__container')
 const aboutBreakpoint = document.querySelector('.about .container')
 const projectsBreakpoint = document.querySelector('.projects .container')
 
-console.log(homeBreakpoint)
-
 const changeActiveNav = which => {
    navbarLinks.forEach(
       link => link.textContent === which ? link.classList.add('active') : link.classList.remove('active')
@@ -22,7 +20,6 @@ const observer = new IntersectionObserver((entries, self) => {
          } else if (e.target == projectsBreakpoint) {
             which = 'Projects'
          }
-         console.log(which)
          changeActiveNav(which)
       }
    })
