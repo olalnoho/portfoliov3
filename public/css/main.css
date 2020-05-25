@@ -757,9 +757,7 @@
 
 .modal-container .modal .carousel .track img {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 70rem;
+  width: 100%;
 }
 
 .modal-container .modal .info {
