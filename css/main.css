@@ -757,6 +757,8 @@
 
 .modal-container .modal .carousel .track img {
   height: 100%;
+  min-width: 70rem;
+  max-width: 70rem;
   width: 100%;
 }
 
@@ -868,16 +870,17 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .modal-container .modal {
     width: 100%;
     top: 0;
   }
   .modal-container .modal .carousel {
-    height: 250px;
+    height: 350px;
     width: 100%;
   }
   .modal-container .modal .carousel .track img {
+    min-width: 100%;
     width: 100%;
   }
   .modal-container .modal__close {
