@@ -1,6 +1,7 @@
 let slideLength;
 
 window.addEventListener('modalOpen', function () {
+   const carousel = document.querySelector('.carousel');
    const slide = document.querySelector('.track');
    const images = document.getElementsByClassName('track__img')
    const next = document.querySelector('#next')
@@ -20,10 +21,11 @@ window.addEventListener('modalOpen', function () {
    window.onresize = function () {
       slideLength = slide.clientWidth
       slide.style.transform = `translateX(-${slideLength}px)`
+      carousel.style.height = String(Math.floor(slideLength / 1.78)) + 'px'
    }
-
    slideLength = slide.clientWidth
    slide.style.transform = `translateX(-${slideLength}px)`
+   carousel.style.height = String(Math.floor(slideLength / 1.78)) + 'px'
 
    Element.prototype.appendAfter = function (element) {
       element.parentNode.insertBefore(this, element.nextSibling);
