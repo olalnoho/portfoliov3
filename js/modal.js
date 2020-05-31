@@ -23,7 +23,6 @@ projectbtns.forEach((btn, i) => {
 }))
 
 const populateModal = proj => {
-   console.log(proj)
    const project = modalData[proj]
    title.textContent = project.title
    description.textContent = project.detail
