@@ -36,4 +36,10 @@ const modalData = {
       images: ['./assets/gram/3-small.png', './assets/gram/1-small.png', './assets/gram/2-small.png']
       // images: ['./assets/gallery/gram.png', './assets/gram/1.png', './assets/gram/2-small.png']
    },
+   forumv2: {
+      title: 'Internet Forum',
+      detail: 'Forum, with support for custom formatting with bbcode like syntax in posts.',
+      source: 'https://github.com/olalnoho/Forum-v2',
+      images: ['./assets/forumv2/3-small.png', './assets/forumv2/1-small.png', './assets/forumv2/2-small.png']
+   }
 }
